@@ -97,7 +97,7 @@ function Pokemon() {
 
 
             <button onClick={buscarPorNombre}>Buscar</button>
-            { (Object.keys(getPokemon).length != 0 && getPokemon.constructor === Object) && (
+            { (Object.keys(getPokemon).length !== 0 && getPokemon.constructor === Object) && (
                     <div>
                         <h1>{getPokemon.name}</h1>
                         <img src={getPokemon.sprites.front_default} />
@@ -107,14 +107,16 @@ function Pokemon() {
             }
 
             <h1>Capturados</h1>
-            { (Object.keys(getCapturados).length != 0 ) && (
+            { (Object.keys(getCapturados).length !== 0 ) && (
                     <div>
                        <ul>
                             {
                                 getCapturados.map( 
                                     (p, i) => 
                                         <li key={i}> 
-                                            <p>{p.nombre}</p><img src={p.imagenURL}/><button onClick={()=>liberar(p._id)}>Liberar</button>
+                                            <p>{p.nombre}</p>
+                                            <img src={p.imagenURL}/>
+                                            <button onClick={()=>liberar(p._id)}>Liberar</button>
                                         </li> 
                                     )
                             }
