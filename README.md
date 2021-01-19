@@ -1,3 +1,3 @@
-## Frontend: Ejercicio de prueba solicitado en entrevista
+## Prueba solicitada en entrevista (FRONTEND)
 
 
